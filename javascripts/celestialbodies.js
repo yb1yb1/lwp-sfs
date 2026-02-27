@@ -75,6 +75,10 @@
     return new CelestialBody(json.mass, json.radius, json.siderealRotation, orbit, json.atmPressure);
   };
 
+  // Note:
+  // CelestialBody(Mass in kilograms, Radius in metres, Sidereal rotation period in seconds, Orbit details using new Orbit(), Atmosphere pressure measured in atm, Atmosphere scale height ***in unknown units***)
+  // Orbit(Semimajor axis in metres, Orbital eccentricity, Orbital inclination in degrees, Longitude of the ascending node measured in degrees, Argument of the periapsis in degrees, Mean anomaly in radians)
+
   CelestialBody.Kerbol = Kerbol = new CelestialBody(1.756567e+28, 2.616e+08, 432000, null);
 
   CelestialBody.Moho = Moho = new CelestialBody(2.5263617e21, 250000, 1210000, new Orbit(Kerbol, 5263138304, 0.2, 7.0, 70.0, 15.0, 3.14));
